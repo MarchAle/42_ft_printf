@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 15:40:08 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/18 17:21:37 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:29:38 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	ft_print_format(va_list args, char c, int *pt_count)
 				"0123456789ABCDEF");
 	if (c == 'p')
 	{
-		ft_putstr("0x");
-		*pt_count += (2 + ft_putnbr_base_u(va_arg(args, unsigned long long),
-					"0123456789abcdef"));
+		*pt_count += ft_putstr("0x");
+		*pt_count += ft_putnbr_base_u(va_arg(args, unsigned long long),
+				"0123456789abcdef");
 	}
 }

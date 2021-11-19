@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 16:07:26 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/19 12:50:50 by amarchal         ###   ########.fr       */
+/*   Created: 2021/11/02 15:08:31 by amarchal          #+#    #+#             */
+/*   Updated: 2021/11/19 12:51:05 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "./ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+size_t	ft_strlen(const char *s)
+{
+	int	i;
 
-void	ft_print_format(va_list args, char c, int *pt_count);
-int		ft_printf(const char *format, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
-int		ft_putnbr_base(long long nbr, char *base);
-int		ft_putnbr_base_u(unsigned long long nbr, char *base);
-size_t	ft_strlen(const char *s);
-
-#endif
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}

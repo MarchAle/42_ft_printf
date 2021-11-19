@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:07:26 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/19 12:50:50 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/19 14:25:51 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <unistd.h>
+# include <stdio.h>
 # include <stdarg.h>
 
 void	ft_print_format(va_list args, char c, int *pt_count);

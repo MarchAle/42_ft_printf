@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 14:38:16 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/19 12:39:59 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:54:17 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,3 @@ void	ft_print_format(va_list args, char c, int *pt_count)
 				"0123456789abcdef");
 	}
 }
-
-// int main(void)
-// {
-//     printf("%d\n", ft_printf("%p\n", (int)-2147483648));
-//     printf("%d\n", printf("%p\n", (int)-2147483648));
-// }

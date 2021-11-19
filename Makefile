@@ -6,7 +6,7 @@
 #    By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/23 12:28:09 by amarchal          #+#    #+#              #
-#    Updated: 2021/11/19 12:51:24 by amarchal         ###   ########.fr        #
+#    Updated: 2021/11/19 14:02:29 by amarchal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =	ft_printf.c			\
 		ft_strlen.c
 
 OBJS = $(SRCS:.c=.o)
-HDRS = libftprintf.h
+HDRS = ft_printf.h
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a

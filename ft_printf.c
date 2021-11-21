@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 14:38:16 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/19 14:23:29 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/21 10:59:56 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (!format[i + 1])
+				return (count);
 			if (format[i + 1] == '%')
 				count += write(1, "%", 1);
 			else
@@ -43,22 +45,24 @@ void	ft_print_format(va_list args, char c, int *pt_count)
 {
 	if (c == 'c')
 		*pt_count += ft_putchar(va_arg(args, int));
-	if (c == 's')
+	else if (c == 's')
 		*pt_count += ft_putstr(va_arg(args, char *));
-	if (c == 'd' || c == 'i')
+	else if (c == 'd' || c == 'i')
 		*pt_count += ft_putnbr_base(va_arg(args, int), "0123456789");
-	if (c == 'u')
+	else if (c == 'u')
 		*pt_count += ft_putnbr_base_u(va_arg(args, unsigned int), "0123456789");
-	if (c == 'x')
+	else if (c == 'x')
 		*pt_count += ft_putnbr_base(va_arg(args, unsigned int),
 				"0123456789abcdef");
-	if (c == 'X')
+	else if (c == 'X')
 		*pt_count += ft_putnbr_base(va_arg(args, unsigned int),
 				"0123456789ABCDEF");
-	if (c == 'p')
+	else if (c == 'p')
 	{
 		*pt_count += ft_putstr("0x");
 		*pt_count += ft_putnbr_base_u(va_arg(args, unsigned long long),
 				"0123456789abcdef");
 	}
+	else
+		*pt_count += write(1, &c, 1);
 }

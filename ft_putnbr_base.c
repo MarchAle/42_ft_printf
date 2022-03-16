@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 20:00:15 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/19 14:39:39 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:28:37 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,4 @@ int	ft_putnbr_base_u(unsigned long long nbr, char *base)
 	ft_putchar(base[nbr % base_size]);
 	return (size);
 }
+ 
